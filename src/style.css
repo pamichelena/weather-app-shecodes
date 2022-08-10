@@ -1,0 +1,65 @@
+.container-sm {
+  border: 3px solid;
+  margin: 124px auto;
+  padding: 40px 30px;
+}
+h1,
+h2,
+h3,
+h4 {
+  display: block;
+  text-align: center;
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 18px;
+  font-weight: 300;
+}
+h3 {
+  font-size: 90px;
+}
+h4 {
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  top: -16px;
+  left: -72px;
+}
+.units {
+  font-size: 30px;
+  position: relative;
+  top: -40px;
+  left: -19px;
+}
+.sun-h3 {
+  position: relative;
+  left: -11px;
+}
+.weather-info,
+.days,
+form {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.search,
+.current {
+  border: 1px solid;
+  border-radius: 40px;
+  padding: 5px 10px;
+  font-size: 13px;
+  margin-top: 20px;
+}
+.search {
+  position: relative;
+  left: -8px;
+}
+.search-bar {
+  display: block;
+  margin: 0 auto;
+  width: 350px;
+  height: 38px;
+  border-radius: 20px;
+}
