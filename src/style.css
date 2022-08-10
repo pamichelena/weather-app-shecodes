@@ -63,3 +63,9 @@ form {
   height: 38px;
   border-radius: 20px;
 }
+.github-link {
+  display: block;
+  margin: 0px auto;
+  text-align: center;
+  padding-top: 27px;
+}
