@@ -39,6 +39,7 @@ function displayWeather(response) {
   );
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].main;
+  celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -69,21 +70,23 @@ function getCurrentLocationWeather(event) {
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  let temperature = temperatureElement.innerHTML;
-  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
 }
 
 let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", convertToFahrenheit);
 
-function convertToCelcius(event) {
+function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 16;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-let celcius = document.querySelector("#celcius-link");
-celcius.addEventListener("click", convertToCelcius);
+let celsiusTemperature = null;
+
+let celsius = document.querySelector("#celsius-link");
+celsius.addEventListener("click", convertToCelsius);
 
 searchCity("Montreal");
 
